@@ -192,6 +192,7 @@
             this.EmpPhoto.Location = new System.Drawing.Point(605, 96);
             this.EmpPhoto.Name = "EmpPhoto";
             this.EmpPhoto.Size = new System.Drawing.Size(110, 121);
+            this.EmpPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.EmpPhoto.TabIndex = 21;
             this.EmpPhoto.TabStop = false;
             // 
@@ -233,6 +234,7 @@
             this.EmpBack.TabIndex = 26;
             this.EmpBack.Text = "Back";
             this.EmpBack.UseVisualStyleBackColor = true;
+            this.EmpBack.Click += new System.EventHandler(this.EmpBack_Click);
             // 
             // EmployeeView
             // 

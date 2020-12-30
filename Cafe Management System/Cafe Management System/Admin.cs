@@ -29,5 +29,12 @@ namespace Cafe_Management_System
             Er.Show();
             this.Hide();
         }
+
+        private void AdminPassReset_Click(object sender, EventArgs e)
+        {
+            PasswordReset pr = new PasswordReset();
+            pr.Show();
+            this.Hide();
+        }
     }
 }

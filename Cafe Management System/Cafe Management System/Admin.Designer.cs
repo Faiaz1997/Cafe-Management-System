@@ -77,6 +77,7 @@
             this.AdminPassReset.TabIndex = 3;
             this.AdminPassReset.Text = "Reset Password";
             this.AdminPassReset.UseVisualStyleBackColor = true;
+            this.AdminPassReset.Click += new System.EventHandler(this.AdminPassReset_Click);
             // 
             // AdminLogout
             // 

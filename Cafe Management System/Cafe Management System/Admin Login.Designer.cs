@@ -38,6 +38,7 @@
             // 
             this.AdminPass.Location = new System.Drawing.Point(79, 116);
             this.AdminPass.Name = "AdminPass";
+            this.AdminPass.PasswordChar = '*';
             this.AdminPass.Size = new System.Drawing.Size(100, 20);
             this.AdminPass.TabIndex = 0;
             // 

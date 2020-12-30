@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace Cafe_Management_System
 {
@@ -28,15 +30,18 @@ namespace Cafe_Management_System
 
         private void EmpAdd_Click(object sender, EventArgs e)
         {
-            
+            byte[] images = null;
+            FileStream st = new FileStream(ImgLoc, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(st);
+            images = br.ReadBytes((int)st.Length);
+
             con.Open();
 
-            string sql = "INSERT INTO [dbo].[EmployeeReg]([Name],[Address],[Phone],[Email],[Password],[Gender],[Position])VALUES('" + EmpName.Text + "','" + EmpAddress.Text + "','" + EmpPhone.Text + "','" + EmpEmail.Text + "','" + EmpPassword.Text + "','" + EmpGender.Text + "','" + EmpPosition.Text + "')";
-
+            string sql = "INSERT INTO [dbo].[EmployeeReg]([Name],[Address],[Phone],[Email],[Password],[Gender],[Position],[Photo])VALUES('" + EmpName.Text + "','" + EmpAddress.Text + "','" + EmpPhone.Text + "','" + EmpEmail.Text + "','" + EmpPassword.Text + "','" + EmpGender.Text + "','" + EmpPosition.Text + "',@images)";
+           
             SqlCommand command = new SqlCommand(sql, con);
+            command.Parameters.Add(new SqlParameter("@images", images));
             int result = command.ExecuteNonQuery();
-            con.Close();
-
             if (EmpName.Text == "")
                 MessageBox.Show("Please enter employee Name");
             else if (EmpAddress.Text == "")
@@ -51,11 +56,11 @@ namespace Cafe_Management_System
                 MessageBox.Show("Please enter Gender");
             else if (EmpPosition.Text == "")
                 MessageBox.Show("Please enter Position");
-            
-
-            else if (result > 0)
+            else if (EmpPhoto.Image == null)
+                MessageBox.Show("Please upload an image");
+            if (result > 0)
             {
-                MessageBox.Show("Event added successfully");
+                MessageBox.Show("Employee added successfully");
                 EmpName.Text = string.Empty;
                 EmpAddress.Text = string.Empty;
                 EmpPhone.Text = string.Empty;
@@ -63,16 +68,26 @@ namespace Cafe_Management_System
                 EmpPassword.Text = string.Empty;
                 EmpGender.Text = string.Empty;
                 EmpPosition.Text = string.Empty;
+                EmpPhoto.Image = null;
             }
             else
                 MessageBox.Show("Error in adding Event");
+            
+            con.Close();
          
         }
 
         private void ImgBrowse_Click(object sender, EventArgs e)
         {
             OpenFileDialog dl = new OpenFileDialog();
-            dl.Filter = ""; 
+            dl.Filter = "png files(*.png)|*.png|jpg files (*.jpg)|*.jpg|All files(*.*)|*.*";
+            if (dl.ShowDialog() == DialogResult.OK && !string.IsNullOrEmpty(dl.FileName))
+            {
+                
+                ImgLoc = dl.FileName.ToString();
+                EmpPhoto.ImageLocation = ImgLoc;
+   
+            }
 
         }
 
@@ -95,6 +110,7 @@ namespace Cafe_Management_System
                 EmpPassword.Text = string.Empty;
                 EmpGender.Text = string.Empty;
                 EmpPosition.Text = string.Empty;
+                EmpPhoto.Image = null;
             }
             else
                 MessageBox.Show("Error in updating ");
@@ -122,6 +138,9 @@ namespace Cafe_Management_System
             EmpPassword.Text = selectedRow.Cells[4].Value.ToString();
             EmpGender.Text = selectedRow.Cells[5].Value.ToString();
             EmpPosition.Text = selectedRow.Cells[6].Value.ToString();
+            byte[] images = (byte[])selectedRow.Cells[7].Value;
+            MemoryStream ms = new MemoryStream(images);
+            EmpPhoto.Image = Image.FromStream(ms);
         }
 
         private void EmpDelete_Click(object sender, EventArgs e)
@@ -135,7 +154,7 @@ namespace Cafe_Management_System
 
             if (result > 0)
             {
-                MessageBox.Show("Event Deleted successfully");
+                MessageBox.Show("Employee Deleted successfully");
                 EmpName.Text = string.Empty;
                 EmpAddress.Text = string.Empty;
                 EmpPhone.Text = string.Empty;
@@ -143,9 +162,17 @@ namespace Cafe_Management_System
                 EmpPassword.Text = string.Empty;
                 EmpGender.Text = string.Empty;
                 EmpPosition.Text = string.Empty;
+                EmpPhoto.Image = null;
             }
             else
                 MessageBox.Show("Error in deleting Event");
+        }
+
+        private void EmpBack_Click(object sender, EventArgs e)
+        {
+            Admin ad = new Admin();
+            ad.Show();
+            this.Hide();
         }
     }
 }
