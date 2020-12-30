@@ -98,6 +98,7 @@
             this.EmployeeList.ReadOnly = true;
             this.EmployeeList.Size = new System.Drawing.Size(216, 378);
             this.EmployeeList.TabIndex = 5;
+            this.EmployeeList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeeList_CellContentClick);
             // 
             // FoodList
             // 
@@ -127,6 +128,7 @@
             this.EmployeeView.TabIndex = 8;
             this.EmployeeView.Text = "View";
             this.EmployeeView.UseVisualStyleBackColor = true;
+            this.EmployeeView.Click += new System.EventHandler(this.EmployeeView_Click);
             // 
             // Admin
             // 

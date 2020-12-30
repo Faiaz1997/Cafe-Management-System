@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace Cafe_Management_System
 {
-    public partial class Admin : Form
+    public partial class Admin : Form 
     {
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-V0HR07H\SQLEXPRESS;Initial Catalog=Cafe Management System;Integrated Security=True");
+        String ImgLoc = "";
         public Admin()
         {
             InitializeComponent();
@@ -35,6 +39,22 @@ namespace Cafe_Management_System
             PasswordReset pr = new PasswordReset();
             pr.Show();
             this.Hide();
+        }
+
+        private void EmployeeView_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "SELECT * FROM [dbo].[EmployeeReg]";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            EmployeeList.DataSource = dt;
+            con.Close();
+        }
+
+        private void EmployeeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }
