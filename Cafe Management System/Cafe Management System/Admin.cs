@@ -16,5 +16,18 @@ namespace Cafe_Management_System
         {
             InitializeComponent();
         }
+
+        private void Admin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        private void EmpReg_Click(object sender, EventArgs e)
+        {
+            EmployeeReg Er = new EmployeeReg();
+            Er.Show();
+            this.Hide();
+        }
     }
 }

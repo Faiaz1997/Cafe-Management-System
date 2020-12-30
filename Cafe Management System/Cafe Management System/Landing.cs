@@ -24,7 +24,9 @@ namespace Cafe_Management_System
 
         private void Home(object sender, EventArgs e)
         {
-
+            Home hm = new Home();
+            hm.Show();
+            this.Hide();
         }
     }
 }

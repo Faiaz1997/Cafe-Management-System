@@ -16,5 +16,10 @@ namespace Cafe_Management_System
         {
             InitializeComponent();
         }
+
+        private void CustomerInfo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

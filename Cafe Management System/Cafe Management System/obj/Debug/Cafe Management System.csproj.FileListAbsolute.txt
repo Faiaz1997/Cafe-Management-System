@@ -1,1 +1,15 @@
 D:\C#\Projects\Cafe Management System\Cafe Management System\bin\Debug\Cafe Management System.exe.config
+D:\C#\Projects\Cafe Management System\Cafe Management System\obj\Debug\Cafe Management System.csprojResolveAssemblyReference.cache
+D:\C#\Projects\Cafe Management System\Cafe Management System\obj\Debug\Cafe_Management_System.Admin_Login.resources
+D:\C#\Projects\Cafe Management System\Cafe Management System\obj\Debug\Cafe_Management_System.Admin.resources
+D:\C#\Projects\Cafe Management System\Cafe Management System\obj\Debug\Cafe_Management_System.CustomerInfo.resources
+D:\C#\Projects\Cafe Management System\Cafe Management System\obj\Debug\Cafe_Management_System.EmployeeReg.resources
+D:\C#\Projects\Cafe Management System\Cafe Management System\obj\Debug\Cafe_Management_System.Landing.resources
+D:\C#\Projects\Cafe Management System\Cafe Management System\obj\Debug\Cafe_Management_System.Home.resources
+D:\C#\Projects\Cafe Management System\Cafe Management System\obj\Debug\Cafe_Management_System.PasswordReset.resources
+D:\C#\Projects\Cafe Management System\Cafe Management System\obj\Debug\Cafe_Management_System.Properties.Resources.resources
+D:\C#\Projects\Cafe Management System\Cafe Management System\obj\Debug\Cafe Management System.csproj.GenerateResource.Cache
+D:\C#\Projects\Cafe Management System\Cafe Management System\bin\Debug\Cafe Management System.exe
+D:\C#\Projects\Cafe Management System\Cafe Management System\bin\Debug\Cafe Management System.pdb
+D:\C#\Projects\Cafe Management System\Cafe Management System\obj\Debug\Cafe Management System.exe
+D:\C#\Projects\Cafe Management System\Cafe Management System\obj\Debug\Cafe Management System.pdb

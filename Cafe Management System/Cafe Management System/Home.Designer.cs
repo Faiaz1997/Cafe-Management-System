@@ -41,6 +41,7 @@
             this.AdminLog.TabIndex = 0;
             this.AdminLog.Text = "Admin";
             this.AdminLog.UseVisualStyleBackColor = true;
+            this.AdminLog.Click += new System.EventHandler(this.AdminLog_Click);
             // 
             // ManagerLog
             // 
@@ -65,7 +66,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 499);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.CustomerLog);
             this.Controls.Add(this.ManagerLog);
             this.Controls.Add(this.AdminLog);

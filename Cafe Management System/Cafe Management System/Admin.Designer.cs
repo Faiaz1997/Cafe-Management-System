@@ -36,7 +36,7 @@
             this.EmployeeList = new System.Windows.Forms.DataGridView();
             this.FoodList = new System.Windows.Forms.DataGridView();
             this.FoodView = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.EmployeeView = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FoodList)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +49,7 @@
             this.EmpReg.TabIndex = 0;
             this.EmpReg.Text = "Employee";
             this.EmpReg.UseVisualStyleBackColor = true;
+            this.EmpReg.Click += new System.EventHandler(this.EmpReg_Click);
             // 
             // ManagerReg
             // 
@@ -116,23 +117,22 @@
             this.FoodView.TabIndex = 7;
             this.FoodView.Text = "View";
             this.FoodView.UseVisualStyleBackColor = true;
-            this.FoodView.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // EmployeeView
             // 
-            this.button1.Location = new System.Drawing.Point(399, 431);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "View";
-            this.button1.UseVisualStyleBackColor = true;
+            this.EmployeeView.Location = new System.Drawing.Point(399, 431);
+            this.EmployeeView.Name = "EmployeeView";
+            this.EmployeeView.Size = new System.Drawing.Size(75, 23);
+            this.EmployeeView.TabIndex = 8;
+            this.EmployeeView.Text = "View";
+            this.EmployeeView.UseVisualStyleBackColor = true;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.EmployeeView);
             this.Controls.Add(this.FoodView);
             this.Controls.Add(this.FoodList);
             this.Controls.Add(this.EmployeeList);
@@ -160,6 +160,6 @@
         private System.Windows.Forms.DataGridView EmployeeList;
         private System.Windows.Forms.DataGridView FoodList;
         private System.Windows.Forms.Button FoodView;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button EmployeeView;
     }
 }

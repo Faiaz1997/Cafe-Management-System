@@ -16,5 +16,22 @@ namespace Cafe_Management_System
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Home_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void AdminLog_Click(object sender, EventArgs e)
+        {
+            Admin_Login Al = new Admin_Login();
+            Al.Show();
+            this.Hide();
+        }
     }
 }
