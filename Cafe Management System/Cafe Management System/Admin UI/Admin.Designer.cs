@@ -130,6 +130,7 @@
             this.FoodView.TabIndex = 7;
             this.FoodView.Text = "Refresh";
             this.FoodView.UseVisualStyleBackColor = false;
+            this.FoodView.Click += new System.EventHandler(this.FoodView_Click);
             // 
             // EmployeeView
             // 

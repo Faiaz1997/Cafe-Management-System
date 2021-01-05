@@ -165,7 +165,7 @@ namespace Cafe_Management_System
             int result = command.ExecuteNonQuery();
             con.Close();
 
-            if (result >= 0)
+            if (result > 0)
             {
                 MessageBox.Show("Employee Deleted successfully");
                 EmpName.Text = string.Empty;

@@ -27,12 +27,19 @@ namespace Cafe_Management_System
         private void CustomerView_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "SELECT * FROM [dbo].[CustomerReg]";
+            string query = "SELECT Name,Address,Phone,Email FROM [dbo].[CustomerReg]";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             CustomerData.DataSource = dt;
             con.Close();
+        }
+
+        private void EmpBack_Click(object sender, EventArgs e)
+        {
+            Admin ad = new Admin();
+            ad.Show();
+            this.Hide();
         }
     }
 }

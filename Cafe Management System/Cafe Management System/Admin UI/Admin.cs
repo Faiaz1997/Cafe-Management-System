@@ -77,5 +77,16 @@ namespace Cafe_Management_System
             Ci.Show();
             this.Hide();
         }
+
+        private void FoodView_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "SELECT * FROM [dbo].[FoodInformation]";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            FoodList.DataSource = dt;
+            con.Close();
+        }
     }
 }

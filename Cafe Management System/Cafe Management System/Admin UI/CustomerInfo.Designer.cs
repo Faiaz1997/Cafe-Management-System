@@ -30,6 +30,7 @@
         {
             this.CustomerData = new System.Windows.Forms.DataGridView();
             this.CustomerView = new System.Windows.Forms.Button();
+            this.EmpBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             // CustomerView
             // 
             this.CustomerView.BackColor = System.Drawing.Color.Orange;
-            this.CustomerView.Location = new System.Drawing.Point(663, 399);
+            this.CustomerView.Location = new System.Drawing.Point(582, 399);
             this.CustomerView.Name = "CustomerView";
             this.CustomerView.Size = new System.Drawing.Size(75, 23);
             this.CustomerView.TabIndex = 9;
@@ -56,12 +57,24 @@
             this.CustomerView.UseVisualStyleBackColor = false;
             this.CustomerView.Click += new System.EventHandler(this.CustomerView_Click);
             // 
+            // EmpBack
+            // 
+            this.EmpBack.BackColor = System.Drawing.Color.OrangeRed;
+            this.EmpBack.Location = new System.Drawing.Point(663, 399);
+            this.EmpBack.Name = "EmpBack";
+            this.EmpBack.Size = new System.Drawing.Size(75, 23);
+            this.EmpBack.TabIndex = 27;
+            this.EmpBack.Text = "Back";
+            this.EmpBack.UseVisualStyleBackColor = false;
+            this.EmpBack.Click += new System.EventHandler(this.EmpBack_Click);
+            // 
             // CustomerInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.EmpBack);
             this.Controls.Add(this.CustomerView);
             this.Controls.Add(this.CustomerData);
             this.Name = "CustomerInfo";
@@ -77,5 +90,6 @@
 
         private System.Windows.Forms.DataGridView CustomerData;
         private System.Windows.Forms.Button CustomerView;
+        private System.Windows.Forms.Button EmpBack;
     }
 }

@@ -82,3 +82,4 @@ D:\C#\Cafe Management System\Cafe Management System\Cafe Management System\obj\D
 D:\C#\Cafe Management System\Cafe Management System\Cafe Management System\obj\Debug\Cafe_Management_System.Properties.Resources.resources
 D:\C#\Cafe Management System\Cafe Management System\Cafe Management System\obj\Debug\Cafe Management System.csproj.GenerateResource.Cache
 D:\C#\Cafe Management System\Cafe Management System\Cafe Management System\obj\Debug\Cafe_Management_System.Customer_Login.resources
+D:\C#\Cafe Management System\Cafe Management System\Cafe Management System\obj\Debug\Cafe_Management_System.Customer.Customer_Form.resources

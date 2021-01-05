@@ -57,16 +57,22 @@
     <Compile Include="Admin UI\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer\Customer Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\Customer Form.Designer.cs">
+      <DependentUpon>Customer Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin UI\CustomerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin UI\CustomerInfo.Designer.cs">
       <DependentUpon>CustomerInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer Login.cs">
+    <Compile Include="Customer\Customer Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer Login.Designer.cs">
+    <Compile Include="Customer\Customer Login.Designer.cs">
       <DependentUpon>Customer Login.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess.cs" />
@@ -95,10 +101,10 @@
     <Compile Include="ManagerUI\ManagerLogin.Designer.cs">
       <DependentUpon>ManagerLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="PasswordReset.cs">
+    <Compile Include="Admin UI\PasswordReset.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PasswordReset.Designer.cs">
+    <Compile Include="Admin UI\PasswordReset.Designer.cs">
       <DependentUpon>PasswordReset.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -109,13 +115,16 @@
     <EmbeddedResource Include="Admin UI\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer\Customer Form.resx">
+      <DependentUpon>Customer Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin UI\CustomerInfo.resx">
       <DependentUpon>CustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin UI\EmployeeReg.resx">
       <DependentUpon>EmployeeReg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer Login.resx">
+    <EmbeddedResource Include="Customer\Customer Login.resx">
       <DependentUpon>Customer Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home\Home.resx">
@@ -127,7 +136,7 @@
     <EmbeddedResource Include="ManagerUI\ManagerLogin.resx">
       <DependentUpon>ManagerLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PasswordReset.resx">
+    <EmbeddedResource Include="Admin UI\PasswordReset.resx">
       <DependentUpon>PasswordReset.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
